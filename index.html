@@ -30,15 +30,15 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <header style="display: none">
+    <header>
       <h2>Teste Técnico - H&W</h2>
     </header>
-    <section id="form-section" style="display: none">
+    <section id="form-section">
       <form action="/" method="POST" id="lead-form">
         <fieldset>
           <div id="form-header">
             <h3>Cadastre-se para saber mais</h3>
-            <img alt="logo" id="form-logo" src="/public/favicon-96x96.png" />
+            <img alt="logo" class="app-logo" src="/public/favicon-96x96.png" />
           </div>
 
           <div class="input-group">
@@ -80,10 +80,16 @@
       </form>
       <div id="form-warning-text"><h4>Apenas 15 vagas restantes</h4></div>
     </section>
-    <section id="product-section">
+    <section id="product-section" style="display: none">
       <!-- Sticky Header -->
       <header id="product-header">
-        <nav>
+        <div id="product-hamburguer-mobile">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3>H&W - Teste Técnico</h3>
+        <nav id="product-header-nav-desktop">
           <ul>
             <li><a href="#hero">Início</a></li>
             <li><a href="#about">Sobre</a></li>
@@ -92,10 +98,25 @@
             <li><a href="#timer">Promoção</a></li>
           </ul>
         </nav>
+        <aside id="product-header-nav-mobile">
+          <div>
+            <h5>H&W</h5>
+            <img alt="logo" class="app-logo" src="/public/favicon-96x96.png" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#hero">Início</a></li>
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#gallery">Galeria</a></li>
+              <li><a href="#testimonials">Depoimentos</a></li>
+              <li><a href="#timer">Promoção</a></li>
+            </ul>
+          </nav>
+        </aside>
       </header>
 
       <!-- Hero Section -->
-      <section id="hero">
+      <section id="product-hero">
         <div id="carousel">
           <div class="carousel-item">
             <img src="image1.jpg" alt="Imagem 1" />

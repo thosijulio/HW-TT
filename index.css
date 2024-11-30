@@ -18,19 +18,18 @@ body {
   display: flex;
   flex-direction: column;
   height: 100dvh;
-  max-height: 100dvh;
   max-width: 100dvw;
-  overflow-y: scroll;
   overflow-x: hidden;
 
   width: 100dvw;
 }
 
-header {
-  margin: 20px 0 0;
-}
 
 /* FORM SECTION */
+
+body>header {
+  margin: 20px 0 0;
+}
 
 #form-section {
   align-items: center;
@@ -41,11 +40,16 @@ header {
   flex-grow: 1;
   flex: 1;
   justify-content: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   width: 100%;
 }
 
 #form-section>form {
   width: 80%;
+}
+
+.form-header {
+  margin: 20px 0 0;
 }
 
 #form-section fieldset {
@@ -61,7 +65,7 @@ header {
   padding: 20px;
 }
 
-#form-section #form-logo {
+.app-logo {
   width: 30px;
 }
 
@@ -100,6 +104,20 @@ header {
   padding-left: 5px;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 #form-section button {
   animation: pulse 2.5s infinite;
   background-color: var(--primary-color);
@@ -130,12 +148,6 @@ header {
   width: 100%;
 }
 
-#form-warning-text h4 {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-left 10s linear infinite;
-}
-
 @keyframes scroll-left {
   0% {
     transform: translateX(140%);
@@ -146,33 +158,10 @@ header {
   }
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-#welcome-div {
-  align-items: center;
-  animation: fade-in-out 4s 1 forwards;
-  background-color: #5CB85C;
-  border-radius: 8px;
-  bottom: 40px;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  width: 80%;
+#form-warning-text h4 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
 }
 
 @keyframes fade-in-out {
@@ -202,6 +191,25 @@ header {
   }
 }
 
+#welcome-div {
+  align-items: center;
+  animation: fade-in-out 4s 1 forwards;
+  background-color: #5CB85C;
+  border-radius: 8px;
+  bottom: 40px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 80%;
+}
+
+.hide {
+  animation: shrink-and-fade 2s forwards;
+}
+
 @keyframes shrink-and-fade {
   0% {
     transform: translateX(0);
@@ -212,14 +220,91 @@ header {
   }
 }
 
-#form-section {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.hide {
-  animation: shrink-and-fade 2s forwards;
-}
-
 
 
 /* PRODUCT SECTION */
+
+#product-header {
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  font-size: 20px;
+  height: 60px;
+  justify-content: center;
+  position: fixed;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  width: 100%;
+}
+
+#product-hamburguer-mobile {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  position: absolute;
+  -webkit-user-select: none;
+  user-select: none;
+  left: 20px;
+}
+
+#product-hamburguer-mobile>div {
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+  height: 2px;
+  width: 20px;
+}
+
+#product-header-nav-desktop {
+  display: none;
+}
+
+#product-header-nav-mobile {
+  align-items: center;
+  background: var(--secondary-color);
+  border-top-right-radius: 12px;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  left: -100%;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  transition: left 0.3s ease;
+}
+
+
+#product-header-nav-mobile>div {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+#product-header-nav-mobile nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#product-header-nav-mobile nav ul li {
+  margin: 15px 0;
+}
+
+#product-header-nav-mobile nav ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#product-hero {
+  margin: 80px 0 0;
+}
+
+a>img {
+  width: 20px;
+}
