@@ -1,0 +1,60 @@
+#timer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#timer>#timer-header {
+  align-self: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  width: 90%;
+}
+
+#countdown {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+#countdown,
+#minutes,
+#seconds {
+  font-family: var(--clock-font-family) !important;
+  font-size: 60px;
+}
+
+#minutes,
+#seconds {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  max-width: 50px;
+  width: 50px;
+}
+
+#cta-button {
+  animation: pulse 1s infinite;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  width: 80%;
+}

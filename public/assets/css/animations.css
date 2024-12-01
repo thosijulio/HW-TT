@@ -1,0 +1,64 @@
+/* Utilizado no toast de boas vindas */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  90% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Utilizado no botão de enviar formulário e de realizar compra */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Utilizado na div de vagas restantes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(140%);
+  }
+
+  100% {
+    transform: translateX(-140%);
+  }
+}
+
+/* Utilizado ao finalizar formulario (Efeito de envia-lo para a esquerda da tela) */
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

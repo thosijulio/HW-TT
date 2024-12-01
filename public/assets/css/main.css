@@ -1,0 +1,41 @@
+@import url(/public/assets/css/animations.css);
+@import url(/public/assets/css/form.css);
+@import url(/public/assets/css/productHeader.css);
+@import url(/public/assets/css/heroAndAbout.css);
+@import url(/public/assets/css/gallery.css);
+@import url(/public/assets/css/testimonials.css);
+@import url(/public/assets/css/timer.css);
+@import url(/public/assets/css/footer.css);
+
+@font-face {
+  font-family: 'Digital7';
+  src: url('/public/assets/fonts/digital_7/digital-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #203b42;
+  --primary-font-family: "Roboto", sans-serif;
+  --clock-font-family: "Digital7", sans-serif;
+  --secondary-color: #fafdea;
+}
+
+* {
+  font-family: var(--primary-font-family);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: 100dvw;
+  overflow-x: hidden;
+  width: 100dvw;
+}
