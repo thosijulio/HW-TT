@@ -41,7 +41,7 @@
   }
 }
 
-/* Utilizado na div de vagas restantes */
+/* Utilizado na div de vagas restantes (mobile) */
 @keyframes scroll-left {
   0% {
     transform: translateX(140%);
@@ -49,6 +49,17 @@
 
   100% {
     transform: translateX(-140%);
+  }
+}
+
+/* Utilizado na div de vagas restantes (desktop) */
+@keyframes scroll-left-desktop {
+  0% {
+    transform: translateX(300%);
+  }
+
+  100% {
+    transform: translateX(-300%);
   }
 }
 

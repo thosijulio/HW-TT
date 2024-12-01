@@ -16,6 +16,9 @@ body>header {
 }
 
 #form-section>form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   width: 80%;
 }
 
@@ -128,4 +131,15 @@ body>header {
 
 .hide {
   animation: move-left 2s forwards;
+}
+
+@media screen and (min-width: 700px) {
+  #form-section fieldset {
+    width: 400px;
+  }
+
+  #form-warning-text h4 {
+    animation: scroll-left-desktop 10s linear infinite;
+
+  }
 }
