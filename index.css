@@ -20,7 +20,6 @@ body {
   height: 100dvh;
   max-width: 100dvw;
   overflow-x: hidden;
-
   width: 100dvw;
 }
 
@@ -200,7 +199,7 @@ body>header {
   display: flex;
   height: 40px;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   visibility: hidden;
   width: 80%;
@@ -235,6 +234,7 @@ body>header {
   position: fixed;
   transition: background-color 0.5s ease, color 0.5s ease;
   width: 100%;
+  z-index: 1;
 }
 
 #product-hamburguer-mobile {
@@ -305,6 +305,265 @@ body>header {
   margin: 80px 0 0;
 }
 
+#product-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#carousel {
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+#thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#thumbnails img {
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background-size: 100% 100%;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+
+#thumbnails img:hover,
+#thumbnails img.active {
+  border: 2px solid #007bff;
+}
+
+#about {
+  margin: 40px 0;
+}
+
+#about-visual {
+  display: none;
+
+}
+
+/* Estilo da seção da galeria */
+#gallery-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+#gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+#image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+#image-modal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+#image-modal.hidden {
+  display: none;
+}
+
+#close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#prev-btn,
+#next-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#prev-btn {
+  left: 20px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#next-btn {
+  right: 20px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* TESTIMONIAL SECTION */
+
+
+#testimonials-section {
+  padding: 40px 0px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  max-width: 100dvw;
+  -webkit-user-select: none;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+}
+
+#testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+/* Carrossel */
+#testimonials-carousel {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  cursor: grab;
+}
+
+.testimonial {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+
+}
+
+.testimonial span {
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+}
+
+/* Controles do Carrossel */
+#carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#prev-btn-testimonial,
+#next-btn-testimonial {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+#pagination {
+  display: flex;
+  gap: 5px;
+}
+
+#pagination div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#pagination div.active {
+  background: var(--primary-color);
+}
+
 a>img {
   width: 20px;
+}
+
+/* TIMER SECTION */
+
+#timer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#timer>#timer-header {
+  align-self: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  width: 90%;
 }

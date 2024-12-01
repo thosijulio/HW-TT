@@ -91,10 +91,10 @@
         <h3>H&W - Teste Técnico</h3>
         <nav id="product-header-nav-desktop">
           <ul>
-            <li><a href="#hero">Início</a></li>
+            <li><a href="#product-hero">Início</a></li>
             <li><a href="#about">Sobre</a></li>
-            <li><a href="#gallery">Galeria</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#gallery-section">Galeria</a></li>
+            <li><a href="#testimonials-section">Depoimentos</a></li>
             <li><a href="#timer">Promoção</a></li>
           </ul>
         </nav>
@@ -105,88 +105,153 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#hero">Início</a></li>
+              <li><a href="#product-hero">Início</a></li>
               <li><a href="#about">Sobre</a></li>
-              <li><a href="#gallery">Galeria</a></li>
-              <li><a href="#testimonials">Depoimentos</a></li>
+              <li><a href="#gallery-section">Galeria</a></li>
+              <li><a href="#testimonials-section">Depoimentos</a></li>
               <li><a href="#timer">Promoção</a></li>
             </ul>
           </nav>
         </aside>
       </header>
 
-      <!-- Hero Section -->
+      <!-- Seção com Image e Carrossel -->
       <section id="product-hero">
-        <!-- <div id="carousel">
+        <div id="carousel">
           <div class="carousel-item">
-            <img src="image1.jpg" alt="Imagem 1" />
+            <img src="/public//assets/images/product1.png" alt="Imagem 1" />
           </div>
           <div class="carousel-item">
-            <img src="image2.jpg" alt="Imagem 2" />
+            <img src="/public//assets/images/product2.png" alt="Imagem 2" />
           </div>
           <div class="carousel-item">
-            <img src="image3.jpg" alt="Imagem 3" />
+            <img src="/public//assets/images/product3.png" alt="Imagem 3" />
           </div>
         </div>
         <div id="thumbnails">
-          <img src="thumb1.jpg" alt="Thumbnail 1" data-index="0" />
-          <img src="thumb2.jpg" alt="Thumbnail 2" data-index="1" />
-          <img src="thumb3.jpg" alt="Thumbnail 3" data-index="2" />
-        </div> -->
+          <img
+            src="/public/assets/images/product1.png"
+            alt="Thumbnail 1"
+            data-index="0"
+          />
+          <img
+            src="/public/assets/images/product2.png"
+            alt="Thumbnail 2"
+            data-index="1"
+          />
+          <img
+            src="/public/assets/images/product3.png"
+            alt="Thumbnail 3"
+            data-index="2"
+          />
+        </div>
       </section>
 
-      <!-- About Section -->
+      <!-- Seção Sobre o Producto -->
       <section id="about">
-        <h2>Sobre o Produto</h2>
-        <p>
-          Descrição do produto com informações importantes sobre suas
-          características e benefícios.
-        </p>
-        <!-- <img src="product-image.jpg" alt="Imagem do Produto" /> -->
+        <div id="about-content">
+          <h2>Sobre o Produto</h2>
+          <p>
+            Nosso produto foi desenvolvido para atender às suas necessidades com
+            excelência e praticidade. Combinamos tecnologia de ponta e design
+            inovador para proporcionar uma experiência única e eficiente.
+          </p>
+          <p>
+            Seja para o seu dia a dia ou momentos especiais, nosso produto
+            oferece qualidade superior, durabilidade e estilo, tornando-se o
+            parceiro ideal para você.
+          </p>
+        </div>
+        <div id="about-visual">
+          <img
+            src="/public/assets/images/product1.png"
+            alt="Imagem do produto"
+          />
+        </div>
       </section>
 
-      <!-- Gallery Section -->
-      <section id="gallery">
-        <h2>Galeria</h2>
-        <div class="gallery-grid">
-          <!-- <div class="gallery-item">
-            <img src="image1-small.jpg" alt="Imagem 1" class="gallery-img" />
-          </div>
-          <div class="gallery-item">
-            <img src="image2-small.jpg" alt="Imagem 2" class="gallery-img" />
-          </div>
-          <div class="gallery-item">
-            <img src="image3-small.jpg" alt="Imagem 3" class="gallery-img" />
-          </div> -->
+      <!-- Seção de Galeria/Modal -->
+
+      <section id="gallery-section">
+        <h2>Galeria de Imagens</h2>
+        <div id="gallery-grid">
+          <img
+            src="/public/assets/images/product1.png"
+            alt="Imagem 1"
+            data-index="0"
+          />
+          <img
+            src="/public/assets/images/product2.png"
+            alt="Imagem 2"
+            data-index="1"
+          />
+          <img
+            src="/public/assets/images/product3.png"
+            alt="Imagem 3"
+            data-index="2"
+          />
+          <img
+            src="/public/assets/images/product1.png"
+            alt="Imagem 4"
+            data-index="3"
+          />
+          <img
+            src="/public/assets/images/product2.png"
+            alt="Imagem 5"
+            data-index="4"
+          />
+          <img
+            src="/public/assets/images/product3.png"
+            alt="Imagem 6"
+            data-index="5"
+          />
+        </div>
+        <div id="image-modal" class="hidden">
+          <span id="close-modal">&times;</span>
+          <button id="prev-btn">&lt;</button>
+          <img id="modal-image" src="" alt="Imagem em destaque" />
+          <button id="next-btn">&gt;</button>
         </div>
       </section>
 
       <!-- Testimonials Section -->
-      <section id="testimonials">
+      <section id="testimonials-section">
         <h2>Depoimentos</h2>
-        <div id="testimonial-slider">
-          <div class="testimonial-item">
-            <p>"Este produto mudou a minha vida!"</p>
-            <span>- Cliente A</span>
+        <div id="testimonials-carousel">
+          <div class="testimonial">
+            <p>
+              "Este produto mudou minha vida! Qualidade excepcional e ótimo
+              atendimento ao cliente."
+            </p>
+            <span>- Maria Silva</span>
           </div>
-          <div class="testimonial-item">
-            <p>"Recomendo a todos, a qualidade é incrível!"</p>
-            <span>- Cliente B</span>
+          <div class="testimonial">
+            <p>
+              "Não poderia estar mais feliz com a minha compra. Recomendo a
+              todos!"
+            </p>
+            <span>- João Pereira</span>
           </div>
-          <div class="testimonial-item">
-            <p>"Excelente, superou minhas expectativas."</p>
-            <span>- Cliente C</span>
+          <div class="testimonial">
+            <p>
+              "Simplesmente incrível! Exatamente o que eu estava procurando."
+            </p>
+            <span>- Ana Oliveira</span>
           </div>
         </div>
-        <div id="pagination">
-          <button id="prev">Anterior</button>
-          <button id="next">Próximo</button>
+        <div id="carousel-controls">
+          <button id="prev-btn-testimonial">&lt;</button>
+          <div id="pagination"></div>
+          <button id="next-btn-testimonial">&gt;</button>
         </div>
       </section>
 
       <!-- Timer Countdown Section -->
       <section id="timer">
-        <h2>Contagem Regressiva para Promoção</h2>
+        <div id="timer-header">
+          <h2>Contagem Regressiva</h2>
+        </div>
+
         <div id="countdown">
           <span id="minutes">00</span>:<span id="seconds">00</span>
         </div>
