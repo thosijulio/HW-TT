@@ -60,3 +60,28 @@
 #about {
   margin: 40px 0;
 }
+
+@media screen and (min-width: 700px) {
+  #hero-and-about {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero-and-about>section {
+    height: 100%;
+    width: 45%;
+  }
+
+  #hero-and-about #about-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  #about-content>h2 {
+    margin-bottom: 30px;
+  }
+}

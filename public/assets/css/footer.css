@@ -40,3 +40,21 @@ footer a {
   font-weight: 500;
   text-decoration: none;
 }
+
+@media screen and (min-width: 700px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 40px;
+  }
+
+  footer #social-links>ul {
+    justify-content: flex-start;
+  }
+
+  footer #footer-links>ul {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+}

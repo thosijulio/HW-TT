@@ -58,3 +58,13 @@
   padding: 10px 20px;
   width: 80%;
 }
+
+@media screen and (min-width: 700px) {
+  #timer-header {
+    width: 300px !important;
+  }
+
+  #timer button {
+    width: 300px;
+  }
+}
